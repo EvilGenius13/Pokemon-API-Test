@@ -37,8 +37,8 @@ def chuck_results():
     
     return render_template('cn_results.html', **context)
 
-    
+
 
 if __name__ == '__main__':
     server.config['ENV'] = 'development'
-    server.run(debug = True)
+    server.run(debug = True, port = 3000)
