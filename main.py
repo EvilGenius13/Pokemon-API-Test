@@ -37,8 +37,25 @@ def chuck_results():
     
     return render_template('cn_results.html', **context)
 
+@server.route('/weather')
+def weather():
+    return render_template('weather.html')
 
-
+@server.route('/w_results')
+def weather_results():
+    city = request.args.get('city')
+    api_key = ""
+    url = "https://api.openweathermap.org/data/2.5/weather?q=%s&units=metric&appid=%s" % (city, api_key)
+    apicall = requests.get(url)
+    data = apicall.json()
+    current = data["main"]["temp"]
+    description = data["weather"][0]["description"]
+    context = {
+        'description' : description,
+        'current' : current,
+        'city' : city,
+    }
+    return render_template('w_results.html', **context)
 if __name__ == '__main__':
     server.config['ENV'] = 'development'
     server.run(debug = True, port = 3000)
