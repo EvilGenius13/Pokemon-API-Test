@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}
+    API Homepage
+{% endblock %}
+
+{% block content %}
+    <h1>The best way to test an API is with the following:</h1>
+    <p>response = requests.get('https://api.chucknorris.io/jokes/random")<br>
+    print(response.status_code)<br>
+    If you get a 404, your api call is probably wrong, if you get a 202, you're good.</p>
+    <h3>Pick an API!</h3>
+
+{% endblock %}

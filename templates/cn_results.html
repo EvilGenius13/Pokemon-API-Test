@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}
+    Chuck Norris API
+{% endblock %}
+
+{% block content %}
+    <h1>This is what a basic json result looks like from the chuck norris API</h1>
+    {"categories":[],"created_at":"2020-01-05 13:42:30.177068","icon_url":"https://assets.chucknorris.host/img/avatar/chuck-norris.png","id":"Dk1WAxA3Ti6BNN3_dNfw9w","updated_at":"2020-01-05 13:42:30.177068","url":"https://api.chucknorris.io/jokes/Dk1WAxA3Ti6BNN3_dNfw9w","value":"The only reason the battle of San Jacinto lasted 18 minutes because Chuck Norris was 17 minutes late"}
+    <br>
+    <h2>***We will only pull "value" which is the joke itself by calling ["value"]**</h2>
+    <h3>Here are your results</h3>
+    {{result}}
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}
+    Chuck Norris API
+{% endblock %}
+
+{% block content %}
+    <h1>Fill out the form and see the results</h1>
+    <form action="/cn_results" method="GET">
+        Do you want a completely random joke?<br/>
+        <input type="radio" name="random_joke" value="yes" id="random_yes">
+        <label for="random_joke">Yes</label>
+        <input type="radio" name="random_joke" value="no" id="random_no">
+        <label for="random_joke">No</label><br>
+        If no to random, type one of the following categories:<br>
+        Animal or Food<br>
+        <input type="text" name="category"><br/>
+        <input type="submit" value="Submit!">
+    </form>
+{% endblock %}

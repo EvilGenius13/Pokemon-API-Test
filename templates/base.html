@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            {% block title %}{% endblock%}
+        </title>
+    </head>
+    <body>
+        <header>
+            <h1>Flask API tests</h1>
+            <br>
+        </header>
+        <main>
+        {% block content %}{% endblock %}
+        </main>
+        <footer>
+            <br>
+            <a href="http://127.0.0.1:3000/index">Home</a><br>
+            <a href="http://127.0.0.1:3000/chucknorris">Chuck Norris</a><br>
+            <a href="http://127.0.0.1:3000/weather">Weather</a><br>
+            <a href="http://127.0.0.1:3000/wow">World of Warcraft</a><br>
+            <a href="http://127.0.0.1:3000/pokemon">Pokemon</a><br>
+        </footer>
+    </body>
+</html>
