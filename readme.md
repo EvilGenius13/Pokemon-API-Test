@@ -5,6 +5,8 @@
 
 ### Please note as of the current commit, only chuck norris and weather are working.
 
+### This repo will bring you through what API's look like at their basic level, and show you how to manipulate that data.
+
 ## API Options :
 ### Chuck Norris
 - Pull a completely random joke
