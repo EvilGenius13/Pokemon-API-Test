@@ -16,3 +16,6 @@
 - ** Please note **
 - You need your own API key for this to work. You can get one at https://openweathermap.org/ You will place your key at api_key = in the main.py app under "def weather_results(): 
 - Example : api_key = "0f04hv84h2n3v94jv"
+### Pokemon
+- A randomly picked pokemon out of the original 151 will show on the main screen with their picture.
+- Input the name of a pokemon and it will pull their name, pokedex#, weight, type, and hp.
