@@ -44,7 +44,7 @@ def weather():
 @server.route('/w_results')
 def weather_results():
     city = request.args.get('city')
-    api_key = "f4503196deb06986bbc59d474d1f2e47"
+    api_key = ""
     url = "https://api.openweathermap.org/data/2.5/weather?q=%s&units=metric&appid=%s" % (city, api_key)
     apicall = requests.get(url)
     data = apicall.json()
