@@ -32,7 +32,7 @@ def chuck_results():
             joke_json = apicall.json()
             result = joke_json['value']
     context = {
-        'result' : result
+        'result' : result,
     }
     
     return render_template('cn_results.html', **context)
@@ -56,6 +56,47 @@ def weather_results():
         'city' : city,
     }
     return render_template('w_results.html', **context)
+
+@server.route('/pokemon')
+def pokemon():
+    random_pokemon_num = random.randint(1, 151) 
+    poke_url = "https://pokeapi.co/api/v2/pokemon/%s" % (random_pokemon_num)
+    api_call = requests.get(poke_url)
+    poke_data = api_call.json()
+    name = poke_data['name']
+    sprite = poke_data['sprites']['front_default']
+    
+
+    context = {
+        'name' : name,
+        'sprites' : sprite,
+    }
+
+    return render_template('pokemon.html', **context)
+
+@server.route('/p_results')
+def poke_results():
+    poke_choice = request.args.get('choice')
+    poke_url = "https://pokeapi.co/api/v2/pokemon/%s" % (poke_choice)
+    api_call = requests.get(poke_url)
+    poke_data = api_call.json()
+    name = poke_data['name']
+    sprite = poke_data['sprites']['front_default']
+    type = poke_data['types'][0]['type']['name']
+    poke_dex = poke_data['id']
+    weight = poke_data['weight']
+    hp = poke_data['stats'][0]['base_stat']
+    context = {
+        'name' : name,
+        'sprite' : sprite,
+        'type' : type,
+        'poke_dex' : poke_dex,
+        'weight' : weight,
+        'hp' : hp,
+    }
+
+    return render_template('/p_results.html', **context)
+
 if __name__ == '__main__':
     server.config['ENV'] = 'development'
     server.run(debug = True, port = 3000)

@@ -14,5 +14,5 @@
 ### Weather
 -Input a city and it will give you the temperature and weather description in celcius
 - ** Please note **
-- You need your own API key for this to work. You will place your key at api_key = in the main.py app under "def weather_results(): 
+- You need your own API key for this to work. You can get one at https://openweathermap.org/ You will place your key at api_key = in the main.py app under "def weather_results(): 
 - Example : api_key = "0f04hv84h2n3v94jv"
