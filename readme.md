@@ -3,7 +3,7 @@
 **Quick Note-**
 ## Usually I only do pokemon examples but due to the nature of viewing different API's pokemon are not the only examples. If you are a hardcore pokemon person just use the pokemon data. 
 
-### Please note as of the current commit, the only API not completed is the WoW API. Chuck Norris, weather, and Pokemon are working.
+### As of this current commit, all API's are working.
 
 ### This repo will bring you through what API's look like at their basic level, and show you how to manipulate that data.
 
